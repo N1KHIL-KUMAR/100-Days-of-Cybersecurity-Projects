@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 
 import requests
 from urllib.parse import urlparse, urlencode, urljoin
