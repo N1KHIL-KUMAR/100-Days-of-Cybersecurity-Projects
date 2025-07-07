@@ -3,6 +3,7 @@
 import requests
 import socket
 
+#function 
 def ip_location(ip_or_host):
     try:
         # Try to resolve if user entered a domain name
