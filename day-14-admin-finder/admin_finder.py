@@ -20,8 +20,8 @@ admin_paths_dic = [
     "/admin-area",
     "/admin_area",
     "/adm",
-    "/wp-admin",         # WordPress
-    "/wp-login.php",     # WordPress
+    "/wp-admin",         # WordPress path
+    "/wp-login.php",     # WordPress path
     "/user/login",
     "/login",
     "/system",
