@@ -4,8 +4,10 @@
 import whois
 import argparse
 
+#functions 
 def main():
-    parser = argparse.ArgumentParser(
+    #arugumant 
+    parser = argparse.ArgumentParser(  
         description="WHOIS Lookup - Simple Command Line Tool",
         usage="Usage: %(prog)s -d example.com"
     )
@@ -14,9 +16,9 @@ def main():
     domain = args.domain
     try:
         who = whois.whois(domain)
-        print(f"[+] Domain Name: {who.domain_name}")
-        print(f"[+] IP : {who.ip}")
-        print(f"[+] Registrar: {who.registrar}")
+        print(f"[+] Domain Name: {who.domain_name}") #domian
+        print(f"[+] IP : {who.ip}") #ip
+        print(f"[+] Registrar: {who.registrar}") 
         print(f"[+] Creation Date: {who.creation_date}")
         print(f"[+] Expiration Date: {who.expiration_date}")
         print(f"[+] Name Servers: {who.name_servers}")
