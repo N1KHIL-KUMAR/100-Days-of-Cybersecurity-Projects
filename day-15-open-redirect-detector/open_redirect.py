@@ -1,9 +1,9 @@
 #!/usr/bin/python3
 
 import requests
-from urllib.parse import urlparse, urlencode, urljoin
+from urllib.parse import urlparse, urlencode, urljoin 
 
-redirect_params = ["next", "url", "redirect", "return", "dest", "destination"]
+redirect_params = ["next", "url", "redirect", "return", "dest", "destination"] # list
 
 
 test_url = "http://evil.com"
@@ -14,9 +14,9 @@ def check_open_redirect(base_url):
         full_url = f"{base_url}?{urlencode(payload)}"
 
         try:
-            response = requests.get(full_url, allow_redirects=False, timeout=5)
+            response = requests.get(full_url, allow_redirects=False, timeout=5) #check url and time ony 5 sec 
             
-            if "Location" in response.headers:
+            if "Location" in response.headers: #condition stetemnt checking acctul loction in headers
                 location = response.headers["Location"]
                 if test_url in location:
                     print(f"[VULNERABLE] Possible open redirect found: {full_url}")
