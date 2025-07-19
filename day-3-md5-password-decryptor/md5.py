@@ -12,11 +12,11 @@ def md5_hash_cracker():
             print("Usage: python script.py <md5_hash>")
             return
 
-        target_hash = sys.argv[1]
+        target_hash = sys.argv[1] 
 
         for password in pass_list:
             hashed = hashlib.md5(password.encode()).hexdigest()
-            if hashed == target_hash:
+            if hashed == target_hash: #conditional statement checking equal 
                 print(f"[+] Password Found: {password}")
                 return
 
