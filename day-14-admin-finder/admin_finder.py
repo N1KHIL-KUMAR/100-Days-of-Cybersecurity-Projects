@@ -34,19 +34,19 @@ admin_paths_dic = [
     "/admincp",
     "/memberadmin"
 ]
-
+#functions 
 def admin_finder(url):
     if not url.startswith("http://") and not url.startswith("https://"):
         url = "https://" + url
     for paths in admin_paths_dic:
         admin_url = f"{url}{paths}"
-        try:
+        try: #keyword 
             r = requests.get(admin_url,timeout=2)
         except requests.RequestException as er:
             print(f"[+] ERROR >> {er}")
             exit()
         try:
-            if r.status_code < 400:
+            if r.status_code < 400: #checking status code
                 print(f"Status code >> [{r.status_code}] -- url >> {admin_url}")
         except requests.RequestException  as re:
             print(f"Error {re}")
