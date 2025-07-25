@@ -30,8 +30,8 @@ def gui_interf():
             try:
                 semaphore.acquire()
                 response = requests.get(subdomain, timeout=2)
-                if response.status_code < 400:
-                    found.append(subdomain)
+                if response.status_code < 400: #checking status code 
+                    found.append(subdomain) # add subdomain in found list
                     output_box.insert(tk.END, f"[+] Found: {subdomain}\n")
                     count_var.set(f"Found: {len(found)}")
             except:
