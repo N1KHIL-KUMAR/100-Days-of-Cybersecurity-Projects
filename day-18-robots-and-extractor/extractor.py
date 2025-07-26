@@ -4,7 +4,7 @@ import requests
 from urllib.parse import urljoin
 
 def fetch_robots_txt(base_url):
-    if not base_url.startswith('http'):
+    if not base_url.startswith('http'): #check first in url 
         base_url = 'http://' + base_url
 
     robots_url = urljoin(base_url, '/robots.txt')
