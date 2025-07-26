@@ -7,9 +7,9 @@ def fetch_robots_txt(base_url):
     if not base_url.startswith('http'): #check first in url 
         base_url = 'http://' + base_url
 
-    robots_url = urljoin(base_url, '/robots.txt')
+    robots_url = urljoin(base_url, '/robots.txt') 
 
-    try:
+    try: #keyboard 
         response = requests.get(robots_url, timeout=10)
         response.raise_for_status()
     except requests.RequestException as e:
