@@ -7,8 +7,8 @@ def ping_scapy(ip):
     pkt = IP(dst=str(ip))/ICMP()
     reply = sr1(pkt, timeout=1, verbose=0)
     return reply is not None
-
-def sweep_network(network):
+#function
+def sweep_network(network): 
     alive = [] list 
     net = ipaddress.ip_network(network, strict=False)
 
