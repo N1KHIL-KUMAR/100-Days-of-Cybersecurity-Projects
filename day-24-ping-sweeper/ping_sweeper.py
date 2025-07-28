@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 
 from scapy.all import ICMP, IP, sr1
-import ipaddress
+import ipaddress #module
 
 def ping_scapy(ip):
     pkt = IP(dst=str(ip))/ICMP()
@@ -9,7 +9,7 @@ def ping_scapy(ip):
     return reply is not None
 
 def sweep_network(network):
-    alive = []
+    alive = [] list 
     net = ipaddress.ip_network(network, strict=False)
 
     for ip in net.hosts():
