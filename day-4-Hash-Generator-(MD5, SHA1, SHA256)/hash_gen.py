@@ -25,12 +25,12 @@ def hash_gen(hash):
 
 if __name__ == "__main__":
     print("------- Hash Generator (MD5, SHA1, SHA256) -------")
-    print("1. MD5")
-    print("2. SHA1")
-    print("3. SHA256")
+    print("1. MD5") #md5 hash
+    print("2. SHA1") #sha1 hash
+    print("3. SHA256") #sha256
 
     try: #keyword
-        choice = int(input("\n[+] Enter Your choice (like 1): "))
+        choice = int(input("\n[+] Enter Your choice (like 1): ")) 
     except ValueError:
         print(f"\n[error] 'int' value (choice : 1)")
         exit()
