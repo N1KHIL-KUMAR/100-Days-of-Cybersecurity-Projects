@@ -1,10 +1,10 @@
 #!/usr/bin/python3
 
-import argparse
-import socket
+import argparse # argument for
+import socket #connection 
 
 def convert_ip(url):
-    try:
+    try: #keyword for error handling 
         ip = socket.gethostbyname(url)
         return ip
     except socket.gaierror:
