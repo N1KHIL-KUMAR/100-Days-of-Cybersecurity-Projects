@@ -12,7 +12,7 @@ def md5_hash_cracker():
             print("Usage: python script.py <md5_hash>")
             return
 
-        target_hash = sys.argv[1] 
+        target_hash = sys.argv[1] #argument
 
         for password in pass_list:
             hashed = hashlib.md5(password.encode()).hexdigest()
